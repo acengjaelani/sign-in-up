@@ -6,9 +6,9 @@ function doGet(e) {
 }
 
 function checkLogin(username, password) {
-  var url = '#';
+  var url = 'https://docs.google.com/spreadsheets/d/1YPImKeXIwGj92-BbUlC-SHom_okyoGD6BygETQV2wgE/edit#gid=0';
   var ss= SpreadsheetApp.openByUrl(url);
-  var webAppSheet = ss.getSheetByName("#");
+  var webAppSheet = ss.getSheetByName("User");
   var getLastRow =  webAppSheet.getLastRow();
   var found_record = '';
   for(var i = 1; i <= getLastRow; i++)
@@ -29,9 +29,9 @@ function checkLogin(username, password) {
 }
 
 function AddRecord(usernamee, passwordd, email, phone) {
-  var url = '#';
+  var url = 'https://docs.google.com/spreadsheets/d/1YPImKeXIwGj92-BbUlC-SHom_okyoGD6BygETQV2wgE/edit#gid=0';
   var ss= SpreadsheetApp.openByUrl(url);
-  var webAppSheet = ss.getSheetByName("#");
+  var webAppSheet = ss.getSheetByName("User");
   webAppSheet.appendRow([usernamee,passwordd,email,phone]);
   
 }
